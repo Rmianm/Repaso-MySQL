@@ -1,0 +1,236 @@
+Creación de las tablas
+_______________________
+
+create table profesores (
+ID_profesor tinyint unsigned not null auto_increment primary key,
+nombre_p varchar(20) not null,
+primer_apellido_p varchar(20) not null,
+programa_adictar varchar(100) not null
+);
+select * from profesores;
+
+create table estudiantes (
+codigo smallint unsigned not null primary key,
+nombre_E varchar(20) not null,
+apellido_E varchar(20),
+programa_cursado int not null,
+profesor_asociado int not null
+);
+select * from estudiantes;
+
+create table programas(
+Id_p tinyint unsigned not null auto_increment primary key,
+nombre_programa varchar(100) not null,
+id_profesor int not null,
+Intensidad_horaria int not null
+);
+
+
+ALTER TABLE profesores MODIFY programa_adictar tinyint unsigned;
+ALTER TABLE estudiantes MODIFY programa_cursado tinyint unsigned;
+ALTER TABLE estudiantes MODIFY profesor_asociado tinyint unsigned;
+ALTER TABLE programas MODIFY id_profesor tinyint unsigned;
+
+Establecer claves foráneas
+____________________________
+
+ALTER TABLE profesores ADD CONSTRAINT fK_profesores FOREIGN KEY (programa_adictar) 
+REFERENCES programas (ID_p);
+ALTER TABLE estudiantes ADD CONSTRAINT fK_estudiantes1 FOREIGN KEY (programa_cursado) 
+REFERENCES programas (ID_p);
+ALTER TABLE estudiantes ADD CONSTRAINT fK_estudiantes2 FOREIGN KEY (profesor_asociado) 
+REFERENCES profesores (ID_profesor);
+ALTER TABLE programas ADD CONSTRAINT fK_programas FOREIGN KEY (id_profesor) 
+REFERENCES profesores (ID_profesor);
+
+# ¿te diste cuenta que un profesor puede tener varios programas pero una clave primaria no se puede repetir? así que se procede a eliminar la siguiente columna
+ALTER TABLE profesores DROP FOREIGN KEY fK_profesores;
+alter table profesores drop column programa_adictar;
+
+# Por ende creamos una tabla que contenga tanto los códigos de los profesores como también de los programas.
+create table profesores_programa(
+N_registro tinyint unsigned auto_increment primary key,
+id_profesor tinyint unsigned,
+id_programa tinyint unsigned,
+constraint fk_profesor_pro_1 foreign key (id_profesor) references profesores(ID_profesor),
+constraint fk_profesor_pro_2 foreign key (id_programa) references programas(ID_p) 
+);
+select * from profesores_programa;
+INSERT INTO programas (nombre_programa,intensidad_horaria)
+VALUES ("Ciencia de datos",90);
+
+# Las siguientes dos díneas se hizo porque se quería los valores con un auto_increment desde 1
+DELETE FROM programas WHERE ID_p=2;
+ALTER TABLE programas AUTO_INCREMENT = 1;
+
+
+INSERT INTO programas (nombre_programa,intensidad_horaria)
+VALUES ("Ciencia de datos",90);
+select * from programas;
+INSERT INTO programas (nombre_programa,intensidad_horaria)
+VALUES ("Administracion",120);
+INSERT INTO programas (nombre_programa,intensidad_horaria)
+VALUES ("Economía",60);
+INSERT INTO programas (nombre_programa,intensidad_horaria)
+VALUES ("Inteligencia Artificial",150);
+INSERT INTO programas (nombre_programa,intensidad_horaria)
+VALUES ("Fenómenos de transporte",80);
+INSERT INTO programas (nombre_programa,intensidad_horaria)
+VALUES ("Deporte formativo",100);
+
+#LLenamos la de profesores
+INSERT INTO profesores (nombre_p, primer_apellido_p)
+VALUES ("Hector","Castrillón");
+INSERT INTO profesores (nombre_p, primer_apellido_p)
+VALUES ("Francy","Arbelaez");
+INSERT INTO profesores (nombre_p, primer_apellido_p)
+VALUES ("Fonceca","Echevvery");
+INSERT INTO profesores (nombre_p, primer_apellido_p)
+VALUES ("Jairo","ramirez");
+select * from profesores;
+
+#Tabla de profesor_programa
+INSERT INTO profesores_programa (id_profesor, id_programa)
+VALUES (2,1);
+select * from profesores_programa;
+INSERT INTO profesores_programa (id_profesor, id_programa)
+VALUES (3,2);
+INSERT INTO profesores_programa (id_profesor, id_programa)
+VALUES (4,3);
+INSERT INTO profesores_programa (id_profesor, id_programa)
+VALUES (1,4);
+INSERT INTO profesores_programa (id_profesor, id_programa)
+VALUES (3,5);
+INSERT INTO profesores_programa (id_profesor, id_programa)
+VALUES (1,6);
+
+#Hagamos de cuenta que se llenó una tabla y esta tabla tiene una clave foránea que debe llenarse con la información de una clave primaria de otra tabla, pero esta tabla no está llena. Entonces debemos dejar este campo sin llenar, luego de que tengamos la tabla donde está la clave primaria que necesitamos ya podemos actualizar los valores de la clave foránea con el siguiente comando:
+
+UPDATE programas
+SET id_profesor = 1
+WHERE Id_p = 6 ;
+
+#Datos tabla estudiantes
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (3567,"Sofia","Lopez",1,2);
+select * from estudiantes;
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (2912,"Mateo","Garcia",2,3);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (4687,"Ana","Castro",3,4);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (1294,"David","Hernández",4,1);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (5689,"Juan","Ortiz",6,1);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (2018,"Andrea","Marin",5,3);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (4142,"Carolina","Montoya",1,2);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (2376,"Sebastían","Vargas",2,3);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (1258,"Paula","Rodriguez",3,4);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (5309,"Nicolás", "Gómez",4,1);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (3146,"Laura","Torres",5,3);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (4550,"Alejandro","Ramirez",6,1);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (1934,"Valentina","Pérez",1,2);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (2825,"Camila","Ruiz",2,3);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (5397,"Daniel", "Álvarez",3,4);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (4123,"Maria", "Estrada",4,1);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (1236,"Andres", "Castro",5,3);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (4012,"Isabella", "Duque",6,1);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (2367,"Julian", "valencia",1,2);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (4915,"Natalia", "Castro",2,3);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (3523,"Samuel", "Duque",3,4);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (1297,"Paula", "sánchez",4,1);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (5738,"Alejandro", "Cárdenas",5,3);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (3187,"Sofía", "Ramirez",6,1);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (4456,"Andrés", "Hernandez",1,2);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (2941,"Daniela", "Rodriguez",2,3);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (1893,"Mateo", "Sanchez",3,4);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (5432,"Camila","Martinez",4,1);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (2016,"Samuel", "Castro",5,3);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (4219,"laura", "Moreno",6,1);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (1782,"Isabela", "Rodrigez",1,2);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (2590,"Santiago", "Rivera",2,3);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (4781,"Valentina", "Jimenez",3,4);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (1196,"Juan", "Garcia",4,1);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (1111,"Miguel", "Ramirez",4,1);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (2345,"Edna", "Rocio",3,4);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (6789,"Julieth", "Marinez",3,4);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (9783,"Vanessa", "Triana",4,1);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (2908,"Lara", "Montes",4,1);
+INSERT INTO estudiantes (codigo,nombre_E,apellido_E,programa_cursado,profesor_asociado)
+VALUES (5843,"Karen", "López",3,4);
+
+
+#Ingresar datos de la tabla notas
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (3567, 4.2);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (2912, 3.8);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (4687, 2.6);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (1294, 1.9);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (5689, 4.9);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (2018, 3.1);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (4142, 0.5);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (2376, 1.2);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (1258, 2.8);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (5309, 2.4);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (3146, 4.5);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (1934, 0.9);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (2825, 2.1);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (5397, 1.5);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (4123, 3.3);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (1236, 4.1);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (4012, 1.8);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (2367, 3.9);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (4915, 0.7);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (3523, 2.3);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (1297, 4.8);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (5738, 1.1);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (3187, 2.9);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (4456, 3.5);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (2941, 0.3);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (1893, 4.3);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (5432, 3.7);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (2016, 1.6);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (4219, 4.7);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (1782, 0.1);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (2590, 2.2);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (4781, 1.4);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (1196, 4.0);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (1111, 3.2);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (2345, 0.4);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (6789, 2.0);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (9783, 4.4);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (2908, 3.4);
+INSERT INTO Notas_Estudiantes (codigo_est, nota ) Values (5843, 1.7);
