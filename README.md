@@ -7,3 +7,6 @@ Una Institución Educativa, lo contrata para realizar la base de datos que le pe
 La Institución ofrece Básica Primaria, Básica Secundaria y media técnica, para la media técnica tiene convenio con otros institutos aliados que ofertan programas específicos para el mundo laboral, aquellos estudiantes interesados en uno de estos programas, se debe inscribir directamente en la Secretaria Académica, y seleccionar el programa que desea hacer en la media técnica. Por ello, el Rector de la Institución, desea saber cuáles son los estudiantes que se encuentran matriculados en los diferentes institutos aliados y cuales son los programas que mayor demanda tienen.
 
 La Institución, desea también hacer un reconocimiento especial aquellos profesores que tienen más estudiantes activos y con calificaciones más altas por programa.
+
+Pregunta adicional.
+- El Ministerio de Educación ha tomado la decición de eliminar los programas que tengan un promedio menor de sus notas menor a 3.0.
