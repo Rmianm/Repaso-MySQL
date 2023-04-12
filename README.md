@@ -13,11 +13,15 @@ La Institución, desea también hacer un reconocimiento especial aquellos profes
 Pregunta adicional.
 - El Ministerio de Educación ha tomado la decición de eliminar los programas que tengan un promedio menor de sus notas menor a 3.0.
 
-Ejercicio 2
+
+
+```bash
+Ejercicio 2 (Jardineria)
+```
 La creación de las tablas así como los valores los saqué del siguiente repositorio https://gist.github.com/josejuansanchez/c408725e848afd64dd9a20ab37fba8c9
 y las consultas propuestas están en la siguiente páginas https://josejuansanchez.org/bd/ejercicios-consultas-sql/index.html, Ejercicio 1.4 "Jardinería".
 
-###Consultas sobre una tabla
+### Consultas sobre una tabla
 1. Devuelve un listado con el código de oficina y la ciudad donde hay oficinas.
 2. Devuelve un listado con la ciudad y el teléfono de las oficinas de España.
 3. Devuelve un listado con el nombre, apellidos y email de los empleados cuyo jefe tiene un código de jefe igual a 7.
@@ -36,7 +40,7 @@ y las consultas propuestas están en la siguiente páginas https://josejuansanch
 12. Devuelve un listado con todos los pagos que se realizaron en el año 2008 mediante Paypal. Ordene el resultado de mayor a menor.
 13. Devuelve un listado con todas las formas de pago que aparecen en la tabla pago. Tenga en cuenta que no deben aparecer formas de pago repetidas.
 
-###Composición Interna
+### Composición Interna
 
 Resuelva todas las consultas utilizando la sintaxis de SQL1 y SQL2. Las consultas con sintaxis de SQL2 se deben resolver con INNER JOIN y NATURAL JOIN.
 
