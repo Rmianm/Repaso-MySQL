@@ -6,7 +6,37 @@
 ```bash
 Ejercicio 1 (Institución Educativa)
 ```
- 
+ <details open>
+  <summary>Menú desplegable</summary>
+
+  - Elemento 1
+  - Elemento 2
+  - Elemento 3
+
+  <style>
+    details {
+      border: 1px solid gray;
+      padding: 5px;
+    }
+    
+    details summary {
+      cursor: pointer;
+    }
+    
+    details[open] {
+      background-color: #eee;
+    }
+    
+    details[open] summary {
+      color: blue;
+    }
+    
+    details:not([open]) summary {
+      color: black;
+    }
+  </style>
+</details>
+
 Una Institución Educativa, lo contrata para realizar la base de datos que le permita llevar el registro académico de sus estudiantes, para esto, se debe tener en cuenta los siguientes aspectos.
 
 La Institución ofrece Básica Primaria, Básica Secundaria y media técnica, para la media técnica tiene convenio con otros institutos aliados que ofertan programas específicos para el mundo laboral, aquellos estudiantes interesados en uno de estos programas, se debe inscribir directamente en la Secretaria Académica, y seleccionar el programa que desea hacer en la media técnica. Por ello, el Rector de la Institución, desea saber cuáles son los estudiantes que se encuentran matriculados en los diferentes institutos aliados y cuales son los programas que mayor demanda tienen.
