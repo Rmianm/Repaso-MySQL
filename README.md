@@ -90,11 +90,10 @@
 
 ---
 <p align="center">
-  <a href="mailto:tuemail@ejemplo.com">Contacto</a> • 
-  <a href="#license">Licencia</a> • 
+  <a href="mailto:tuemail@ejemplo.com">miramirezma@unal.edu.co</a> • 
   <a href="https://tusitio.com">Sitio web</a>
 </p>
 <p align="center">
-  Proyecto creado con ❤️ por Tu Nombre
+  Ejercicios resultos con ❤️ por Rmianm
 </p>
 
