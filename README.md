@@ -1,5 +1,4 @@
-# Repaso-MySQL
-# **![MySQL logo](https://img.icons8.com/color/48/000000/mysql-logo.png) Título del Proyecto**
+# **![MySQL logo](https://img.icons8.com/color/48/000000/mysql-logo.png) Ejercicios Base de Datos**
 
 
 <img alt="Estado del proyecto" src="https://img.shields.io/badge/Estado-En%20proceso-blue" style="width: 150px;">
