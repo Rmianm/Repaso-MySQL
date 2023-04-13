@@ -3,11 +3,13 @@
 
 <img alt="Estado del proyecto" src="https://img.shields.io/badge/Estado-En%20proceso-blue" style="width: 150px;">
 
-```bash
-Ejercicio 1 (Institución Educativa)
-```
+
  <details open>
-  <summary> **Ejercicio 1**</summary>
+  <summary>Ejercicio 1</summary>
+ 
+  ```bash
+  Institución Educativa
+  ```
   Una Institución Educativa, lo contrata para realizar la base de datos que le permita llevar el registro académico de sus estudiantes, para esto, se debe tener en       cuenta los siguientes aspectos.
 
   La Institución ofrece Básica Primaria, Básica Secundaria y media técnica, para la media técnica tiene convenio con otros institutos aliados que ofertan programas       específicos para el mundo laboral, aquellos estudiantes interesados en uno de estos programas, se debe inscribir directamente en la Secretaria Académica, y             seleccionar el programa que desea hacer en la media técnica. Por ello, el Rector de la Institución, desea saber cuáles son los estudiantes que se encuentran           matriculados en los diferentes institutos aliados y cuales son los programas que mayor demanda tienen.
@@ -19,10 +21,15 @@ Ejercicio 1 (Institución Educativa)
 </details>
 <details>
   <summary>**Ejercicio 2**</summary>
+ 
+  ```bash
+  Jardinería
+  ```
   La creación de las tablas así como los valores los saqué del siguiente repositorio https://gist.github.com/josejuansanchez/c408725e848afd64dd9a20ab37fba8c9
   y las consultas propuestas están en la siguiente páginas https://josejuansanchez.org/bd/ejercicios-consultas-sql/index.html, Ejercicio 1.4 "Jardinería".
+ 
   <details>
-    <summary> *Consultas sobre una tabla* </summary>
+    <summary> Consultas sobre una tabla </summary>
 
    1. Devuelve un listado con el código de oficina y la ciudad donde hay oficinas.
    2. Devuelve un listado con la ciudad y el teléfono de las oficinas de España.
@@ -44,7 +51,7 @@ Ejercicio 1 (Institución Educativa)
   </details>
 
   <details>
-    <summary>*Composición Interna*</summary>
+    <summary> Composición Interna </summary>
    
    1. Obtén un listado con el nombre de cada cliente y el nombre y apellido de su representante de ventas.
    2. Muestra el nombre de los clientes que hayan realizado pagos junto con el nombre de sus representantes de ventas.
@@ -56,7 +63,8 @@ Ejercicio 1 (Institución Educativa)
   </details>
 
   <details>
-    <summary>*Consultas Resumen*</summary>
+    <summary>Consultas Resumen</summary>
+   
    1. ¿Cuántos empleados hay en la compañía?
    2. ¿Cuántos clientes tiene cada país?
    3. ¿Cuál fue el pago medio en 2009?
