@@ -49,5 +49,3 @@ y las consultas propuestas están en la siguiente páginas https://josejuansanch
 5. Devuelve el nombre de los clientes que no hayan hecho pagos y el nombre de sus representantes junto con la ciudad de la oficina a la que pertenece el representante.
 6. Lista la dirección de las oficinas que tengan clientes en Fuenlabrada.
 7. Devuelve el nombre de los clientes y el nombre de sus representantes junto con la ciudad de la oficina a la que pertenece el representante.
-8. Devuelve un listado con el nombre de los empleados junto con el nombre de sus jefes.
-9. Devuelve un listado que muestre el nombre de cada empleados, el nombre de su jefe y el nombre del jefe de sus jefe.
