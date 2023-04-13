@@ -13,6 +13,58 @@ Ejercicio 1 (Institución Educativa)
   - Elemento 2
   - Elemento 3
 </details>
+<details>
+  <summary>Menú principal</summary>
+
+  <details>
+    <summary>Submenú 1</summary>
+
+    - Elemento 1
+    - Elemento 2
+    - Elemento 3
+  </details>
+
+  <details>
+    <summary>Submenú 2</summary>
+
+    - Elemento 1
+    - Elemento 2
+    - Elemento 3
+  </details>
+
+  <details>
+    <summary>Submenú 3</summary>
+
+    - Elemento 1
+    - Elemento 2
+    - Elemento 3
+  </details>
+
+  <style>
+    details {
+      border: 1px solid gray;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    details[open] {
+      background-color: #eee;
+    }
+
+    details[open] summary {
+      color: blue;
+    }
+
+    details:not([open]) summary {
+      color: black;
+    }
+  </style>
+</details>
 
 Una Institución Educativa, lo contrata para realizar la base de datos que le permita llevar el registro académico de sus estudiantes, para esto, se debe tener en cuenta los siguientes aspectos.
 
