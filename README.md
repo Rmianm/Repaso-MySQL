@@ -76,7 +76,6 @@ Ejercicio 1 (Institución Educativa)
    17. La misma información que en la pregunta anterior, pero agrupada por código de producto filtrada por los códigos que empiecen por OR.
    18. Lista las ventas totales de los productos que hayan facturado más de 3000 euros. Se mostrará el nombre, unidades vendidas, total facturado y total facturado con    impuestos (21% IVA).
    19. Muestre la suma total de todos los pagos que se realizaron para cada uno de los años que aparecen en la tabla pagos.
-    
   </details>
 
 </details>
