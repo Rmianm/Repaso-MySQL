@@ -2,6 +2,8 @@
 
 ![Estado del proyecto](https://img.shields.io/badge/Estado-En%20proceso-yellow)
 
+<img alt="Estado del proyecto" src="https://img.shields.io/badge/Estado-En%20proceso-blue" style="width: 200px;">
+
 
 ```bash
 Ejercicio 1 (Institución Educativa)
