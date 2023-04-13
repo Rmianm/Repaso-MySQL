@@ -2,7 +2,6 @@
 
 <img alt="Estado del proyecto" src="https://img.shields.io/badge/Estado-En%20proceso-blue" style="width: 150px;">
 
-
 ```bash
 Ejercicio 1 (Institución Educativa)
 ```
