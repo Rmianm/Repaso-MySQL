@@ -1,8 +1,6 @@
 # Repaso-MySQL
 
-![Estado del proyecto](https://img.shields.io/badge/Estado-En%20proceso-yellow)
-
-<img alt="Estado del proyecto" src="https://img.shields.io/badge/Estado-En%20proceso-blue" style="width: 200px;">
+<img alt="Estado del proyecto" src="https://img.shields.io/badge/Estado-En%20proceso-blue" style="width: 150px;">
 
 
 ```bash
