@@ -88,4 +88,13 @@
 
 </details>
 
+---
+<p align="center">
+  <a href="mailto:tuemail@ejemplo.com">Contacto</a> • 
+  <a href="#license">Licencia</a> • 
+  <a href="https://tusitio.com">Sitio web</a>
+</p>
+<p align="center">
+  Proyecto creado con ❤️ por Tu Nombre
+</p>
 
