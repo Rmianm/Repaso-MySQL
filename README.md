@@ -12,8 +12,6 @@ Ejercicio 1 (Institución Educativa)
   - Elemento 1
   - Elemento 2
   - Elemento 3
-
-  <style>
 </details>
 
 Una Institución Educativa, lo contrata para realizar la base de datos que le permita llevar el registro académico de sus estudiantes, para esto, se debe tener en cuenta los siguientes aspectos.
