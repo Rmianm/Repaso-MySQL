@@ -20,7 +20,7 @@
   - El Ministerio de Educación ha tomado la decición de eliminar los programas que tengan un promedio menor de sus notas menor a 3.0.
 </details>
 <details>
-  <summary>**Ejercicio 2**</summary>
+  <summary> Ejercicio 2 </summary>
  
   ```bash
   Jardinería
