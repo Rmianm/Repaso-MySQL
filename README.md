@@ -1,5 +1,8 @@
 # Repaso-MySQL
 
+## ![Estado del proyecto](https://img.shields.io/badge/Estado-En%20proceso-yellow)
+
+
 ```bash
 Ejercicio 1 (Institución Educativa)
 ```
