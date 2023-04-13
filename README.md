@@ -9,35 +9,35 @@ Ejercicio 1 (Institución Educativa)
  <details open>
   <summary>Ejercicio 1</summary>
 
-  - Elemento 1
-  - Elemento 2
-  - Elemento 3
+  Elemento 1
+  Elemento 2
+  Elemento 3
 </details>
 <details>
-  <summary>Menú principal</summary>
+  <summary>Ejercicio 2</summary>
 
   <details>
     <summary>Submenú 1</summary>
 
-    - Elemento 1
-    - Elemento 2
-    - Elemento 3
+    Elemento 1
+    Elemento 2
+    Elemento 3
   </details>
 
   <details>
     <summary>Submenú 2</summary>
 
-    - Elemento 1
-    - Elemento 2
-    - Elemento 3
+    Elemento 1
+    Elemento 2
+    Elemento 3
   </details>
 
   <details>
     <summary>Submenú 3</summary>
 
-    - Elemento 1
-    - Elemento 2
-    - Elemento 3
+    Elemento 1
+    Elemento 2
+    Elemento 3
   </details>
 
 </details>
