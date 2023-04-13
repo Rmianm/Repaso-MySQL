@@ -42,8 +42,6 @@ y las consultas propuestas están en la siguiente páginas https://josejuansanch
 
 ### Composición Interna
 
-Resuelva todas las consultas utilizando la sintaxis de SQL1 y SQL2. Las consultas con sintaxis de SQL2 se deben resolver con INNER JOIN y NATURAL JOIN.
-
 Obtén un listado con el nombre de cada cliente y el nombre y apellido de su representante de ventas.
 
 Muestra el nombre de los clientes que hayan realizado pagos junto con el nombre de sus representantes de ventas.
