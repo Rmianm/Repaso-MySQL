@@ -88,9 +88,11 @@
 <details>
  <summary>Ejercicio 3</summary>
 </details>
+
 ```sh
   Si tienes alguna recomendación o corrección, por favor no dudes en mandarme un email. Agradezco cualquier retroalimentación que pueda ayudarme a mejorar mis habilidades y aportar a la comunidad.
 ```
+
 ---
 <p align="center">
   <a href="mailto:tuemail@ejemplo.com">miramirezma@unal.edu.co</a> • 
