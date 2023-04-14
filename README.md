@@ -85,14 +85,12 @@
   </details>
 
 </details>
-<div class="callout">
-  ¡Si tienes alguna recomendación o corrección, por favor no dudes en ponerte en contacto conmigo! Agradezco cualquier comentario que pueda ayudarme a mejorar mis habilidades y aportar a la comunidad de MySQL.
-</div>
-.callout {
-  background-color: #FFC107; /* Cambia el color de fondo según tus preferencias */
-  border-radius: 5px; /* Agrega bordes redondeados */
-  padding: 10px; /* Agrega un poco de espacio alrededor del texto */
-}
+<details>
+ <summary>Ejercicio 3</summary>
+</details>
+```sh
+  Si tienes alguna recomendación o corrección, por favor no dudes en mandarme un email. Agradezco cualquier retroalimentación que pueda ayudarme a mejorar mis habilidades y aportar a la comunidad.
+```
 ---
 <p align="center">
   <a href="mailto:tuemail@ejemplo.com">miramirezma@unal.edu.co</a> • 
