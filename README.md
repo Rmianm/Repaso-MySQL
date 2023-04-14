@@ -85,7 +85,9 @@
   </details>
 
 </details>
-
+<div class="callout">
+  ¡Si tienes alguna recomendación o corrección, por favor no dudes en ponerte en contacto conmigo! Agradezco cualquier comentario que pueda ayudarme a mejorar mis habilidades y aportar a la comunidad de MySQL.
+</div>
 ---
 <p align="center">
   <a href="mailto:tuemail@ejemplo.com">miramirezma@unal.edu.co</a> • 
